@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;;
+}
+
+header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('public/carpet-header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header div.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: red;
+}
+
+header div.skew {
+    position: absolute;
+    right: -10%;
+    width: 65%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: skew(-20deg);
+}
+
+header div.header-content {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    color: white;
+}
+
+nav {
+    position: relative;
+    right: 0;
+    height: 10vh;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 0 10px;
+    list-style-type: none;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 30px;
+    padding: 0 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+nav ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: white; /* Color of the underline */
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+    position: absolute;
+    bottom: -5px; /* Distance from the text */
+    left: 0;
+  }
+
+nav ul li:hover::after {
+    width: 100%; /* Expands the underline */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a.active {
+    color: #333
+}
+
