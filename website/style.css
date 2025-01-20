@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 1.6;;
+    line-height: 1.6;
 }
 
 header {
@@ -39,9 +43,42 @@ header div.skew {
 header div.header-content {
     position: absolute;
     right: 0;
+    top: 30vh;
+    padding: 20px 80px 20px 10px;
     width: 50%;
-    height: 100vh;
+    height: 50vh;
     color: white;
+}
+
+div.header-content h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px #333;
+}
+
+div.header-content hr {
+    color: white;
+    margin: 1.6em 0 4em;
+}
+
+div.header-content div.description {
+    font-size: 1.2em;
+    margin: 1em 0 2em;
+}
+
+div.header-content button {
+    display: block;
+    padding: 20px 40px;
+    font-size: 1.4em;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: .2s;
+    cursor: pointer;
+}
+
+div.header-content button:hover {
+    background-color: white;
+    color: #333;
 }
 
 nav {
@@ -65,6 +102,7 @@ nav ul li {
     padding: 0 10px;
     font-size: 1.4em;
     font-weight: bold;
+    text-shadow: 2px 2px #333;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -94,3 +132,18 @@ nav ul li a.active {
     color: #333
 }
 
+section {
+    height: 100vh;
+}
+
+section#about{
+    background-color: antiquewhite;
+}
+
+section#gallery {
+    background-color: blueviolet;
+}
+
+section#contact {
+    background-color: crimson;
+}
