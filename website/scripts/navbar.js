@@ -1,5 +1,5 @@
 const SCROLL_MAX = 200;
-const NAVBAR_OFFSET = 70;
+const NAVBAR_OFFSET = window.screen.width > 1024 ? 70 : 0;
 
 const navbar = document.querySelector('nav#navbar');
 const scrollLinks = document.querySelectorAll('a.menu-link');
@@ -23,18 +23,27 @@ const moveToSection = (e) => {
     });
 }
 
-const toggleHamburger = (e) => {
+const toggleHamburgerMenu = (e) => {
     e.preventDefault();
 
     hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+}
+
+const deactivateHamburgerMenu = (e) => {
+    e.preventDefault();
+
+    hamburger.classList.remove('active');
+    navbar.classList.remove('active')
 }
 
 
 window.addEventListener('scroll', scrollWithOpacity);
 
 for (link of scrollLinks) {
-    link.addEventListener('click', moveToSection)
+    link.addEventListener('click', moveToSection);
+    link.addEventListener('click', deactivateHamburgerMenu);
 }
 
-hamburger.addEventListener('click', toggleHamburger);
+hamburger.addEventListener('click', toggleHamburgerMenu);
 
