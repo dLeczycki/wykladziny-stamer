@@ -8,9 +8,17 @@
 
 html {
     scroll-behavior: smooth;
+    
+    
+    --theme-color: rgb(227, 0, 15);
+    --main-color: #333333; /* rgb: 51,51,51 */
+    --background-color: white;
+    --text-color: #333333;
 }
 
 body {
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -43,7 +51,6 @@ div.logo{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    color: red;
 }
 
 div.skew {
@@ -72,7 +79,7 @@ div.header-content h1 {
 }
 
 div.header-content hr {
-    color: red;
+    color: var(--theme-color);
     margin: 1.6em 0 4em;
 }
 
@@ -149,7 +156,7 @@ nav ul li:hover::after {
 
 nav ul li i {
     width: 30px;
-    color: red;
+    color: var(--theme-color);
 }
 
 nav ul li a {
