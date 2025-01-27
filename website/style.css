@@ -14,6 +14,8 @@ html {
     --main-color: #333333; /* rgb: 51,51,51 */
     --background-color: white;
     --text-color: #333333;
+
+    --footer-size: 200px;
 }
 
 body {
@@ -37,6 +39,7 @@ section h2 {
     text-align: center;
     font-weight: bold;
     font-size: 2em;
+    text-transform: uppercase;
 }
 
 section h2::after {
@@ -405,3 +408,88 @@ section#contact {
 }
 
 /* FOOTER */
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: var(--footer-size);
+    background-color: var(--main-color);
+    color: white;
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: var(--footer-size) solid transparent;
+    border-right: var(--footer-size) solid transparent;
+    border-bottom: var(--footer-size) solid var(--theme-color);
+    transform: translateX(-50%);
+}
+
+div.localization {
+    width: 50%;
+    padding-right: var(--footer-size);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.localization div.logo {
+    position: static;
+    margin: 0 5%;
+}
+
+div.localization div.company {
+    margin: 0 5%;
+}
+
+div.localization div.map {
+    width: 20%;
+    height: 100%;
+}
+
+div.contact-info {
+    width: 50%;
+    padding-left: var(--footer-size);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer p {
+    margin: 0.4em 0;
+    font-size: 1.2em;
+}   
+
+footer p i {
+    display: block;
+    margin-right: 0.2em;
+    padding: 9px 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 22px;
+    background-color: var(--theme-color);
+    border-radius: 50%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+div.copywright {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--theme-color);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
