@@ -62,11 +62,22 @@ header {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url('public/carpet-header.jpg');
+    background-image: url('public/carpet-header.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
+}
+
+header::before {
+    content: '';
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 div.logo{
