@@ -8,6 +8,7 @@ const hamburger = document.querySelector('button#hamburger');
 const scrollWithOpacity = () => {
     const opacity = window.scrollY > SCROLL_MAX ? 1 : 1 - (SCROLL_MAX - window.scrollY) / SCROLL_MAX;
     navbar.style.backgroundColor = `rgba(51,51,51,${opacity})`;
+    navbar.style.borderBottom = `2px solid rgba(227, 0, 15,${opacity})`;
 }
 
 const moveToSection = (e) => {

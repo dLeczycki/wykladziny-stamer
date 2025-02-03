@@ -419,7 +419,8 @@ div.offer-card.active div.circle {
 
 /* SECTION GALLERY */
 section#gallery {
-    background-color: blueviolet;
+    background-color: var(--main-color);
+    color: white;
 }
 
 /* SECTION ABOUT */
