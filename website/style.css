@@ -423,9 +423,63 @@ section#gallery {
 }
 
 /* SECTION ABOUT */
-section#contact {
-    background-color: crimson;
+section#about {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+section#about h2 {
+    width: 100%;
+    text-align: center;
+}
+section#about h3 {
+    margin-bottom: .6em;
+}
+
+section#about div.container {
+    width: 60%;
+    padding: 1em;
+    text-align: justify;
+}
+
+section#about img.handyman {
+    margin: 0 auto;
+    display: block;
+    max-height: 90vh;
+    height: 90vh;
+    width: auto;
+    object-fit: cover;
+}
+
+section#about div.container:nth-of-type(1) {
+    position: relative;
+    width: 30%;
+    transform: translateY(-20%);
+    z-index: -1;
+}
+
+section#about div.about-info {
+    margin: 1.4em 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section#about div.about-info i {
+    padding-top: .2em;
+    width: 100px;
+    color: var(--theme-color);
+    text-align: center;
+    font-size: 1.4em;
+}
+
+section#about div.about-info p {
+    width: calc(100% - 100px);
+}
+
+section#about div.fun-fact {
+    margin-top: 3em;
+}
+
 
 /* FOOTER */
 footer {
