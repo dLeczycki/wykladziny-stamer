@@ -15,6 +15,10 @@ html {
     --background-color: white;
     --text-color: #333333;
 
+    --navbar-height: 80px;
+
+    --about-icon-width: 100px;
+
     --footer-size: 260px;
 }
 
@@ -91,7 +95,7 @@ header::before {
 
 div.logo{
     position: absolute;
-    top: 20px;
+    top: calc((var(--navbar-height) - 50px) / 2);
     left: 20px;
     height: 50px;
     width: 200px;
@@ -156,7 +160,7 @@ nav {
     position: fixed;
     left: 0;
     right: 0;
-    height: 70px;
+    height: var(--navbar-height);
     padding: 10px 0;
     text-align: center;
     transition: .6s;
@@ -269,6 +273,13 @@ button#hamburger {
 }
 
 @media (max-width: 1024px) {
+    div.logo {
+        position: static;
+        margin: .8em auto .2em;
+        height: 40px;
+        width: 160px;
+        text-align: left;
+    }
     button#hamburger {
         position: fixed;
         right: 10px;
@@ -467,18 +478,38 @@ section#about div.about-info {
 
 section#about div.about-info i {
     padding-top: .2em;
-    width: 100px;
+    width: var(--about-icon-width);
     color: var(--theme-color);
     text-align: center;
     font-size: 1.4em;
 }
 
 section#about div.about-info p {
-    width: calc(100% - 100px);
+    width: calc(100% - var(--about-icon-width));
 }
 
 section#about div.fun-fact {
     margin-top: 3em;
+}
+
+@media(max-width: 1024px) {
+    section#about img.handyman {
+        height: 70vh;
+        max-height: 70vh;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 768px) {
+    section#about div.container:nth-of-type(1) {
+        display: none;
+    }
+    section#about div.container:nth-of-type(2) {
+        width: 100%;
+    }
+    html {
+        --about-icon-width: 60px;
+    }
 }
 
 
