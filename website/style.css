@@ -487,6 +487,27 @@ div.gallery-images img.active {
     border: 2px solid var(--theme-color);
 }
 
+@media (max-width: 1500px) {
+    div.gallery-active-image {
+        width: 60vw;
+    }
+
+    div.gallery-images img {
+        width: 15vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    div.gallery-active-image {
+        width: 60vw;
+    }
+
+    div.gallery-images img {
+        width: 15vw;
+    }
+}
+
+
 @media (max-width: 1024px) {
     section#gallery {
         min-height: unset;
