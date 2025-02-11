@@ -140,18 +140,20 @@ div.header-content div.description {
     margin: 1em 0 2em;
 }
 
-div.header-content button {
+div.header-content a {
     display: block;
     padding: 1em 2em;
     font-size: 1.4em;
+    width: 300px;
     background-color: transparent;
     border: 2px solid white;
     color: white;
     transition: .2s;
     cursor: pointer;
+    text-align: center;
 }
 
-div.header-content button:hover {
+div.header-content a:hover {
     background-color: white;
     color: #333;
 }

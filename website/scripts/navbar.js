@@ -4,6 +4,7 @@ const NAVBAR_OFFSET = window.screen.width > 1024 ? 70 : 0;
 const navbar = document.querySelector('nav#navbar');
 const scrollLinks = document.querySelectorAll('a.menu-link');
 const hamburger = document.querySelector('button#hamburger');
+const seeMoreButton = document.querySelector('a.see-more');
 
 const scrollWithOpacity = () => {
     const opacity = window.scrollY > SCROLL_MAX ? 1 : 1 - (SCROLL_MAX - window.scrollY) / SCROLL_MAX;
@@ -45,6 +46,7 @@ for (link of scrollLinks) {
     link.addEventListener('click', moveToSection);
     link.addEventListener('click', deactivateHamburgerMenu);
 }
+seeMoreButton.addEventListener('click', moveToSection);
 
 hamburger.addEventListener('click', toggleHamburgerMenu);
 
